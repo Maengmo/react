@@ -109,3 +109,144 @@ class Props extends React.Component {
   root.render (
     <App3></App3>
   )
+
+  class Props4 extends React.Component {
+    render() {
+      let {propsValue} = this.props;
+  
+      return (
+        <div>
+          <p>{JSON.stringify(propsValue)}</p>
+          <p>{propsValue.program}</p>
+          <p>{propsValue.version}</p>
+        </div>
+      )
+    }
+  }
+  
+  class App4 extends React.Component {
+    render() {
+      let h1Style = {
+        fontWeight: "normal"
+      }
+  
+      return (
+        <div>
+          <h1 style={h1Style}>React Example</h1>
+          <Props4 propsValue={{program: "React", version: "18.2.0"}}></Props4>
+        </div>
+      );
+  
+    }
+  }
+  
+  root.render(
+    <App4></App4>
+  )
+  
+  // class Props2 extends React.Component {
+  //   render() {
+  //     let {program, version} = this.props;
+  
+  //     return (
+  //       <div>
+  //         {program} {version}
+  //       </div>
+  //     )
+  //   }
+  // }
+  
+  // class App3 extends React.Component {
+  //   render() {
+  //     let h1Style = {
+  //       fontWeight : "normal"
+  //     }
+  
+  //     return (
+  //       <div>
+  //         <h1 style={h1Style}>React Example</h1>
+  //         <Props2 version="18.2.0"></Props2>
+  //       </div>
+  //     )
+  //   }
+  // }
+  
+  // Props.propTypes= {
+  //   program: PropTypes.isRequired
+  // };
+  
+  // root.render(
+  //   <App3></App3>
+  // )
+  
+  class Props5 extends React.Component {
+    render() {
+      let {program, version} = this.props;
+  
+      return (
+        <div>
+          {program} {version}
+        </div>
+      );
+    }
+  }
+  
+  class App5 extends React.Component {
+    render() {
+      let h1Style = {
+        fontWeight: "normal"
+      }
+      
+      return (
+        <div>
+          <h1 style={h1Style}>React Example</h1>
+          <Props5 version="18.2.0"></Props5>
+        </div>
+      );
+    }
+  }
+  
+  Props5.defaultProps = {
+    program: "React",
+    version: "1000"
+  }
+  
+  root.render(
+    <App5></App5>
+  )
+  
+  class Props6 extends React.Component {
+    render() {
+      let children = this.props.children;
+  
+      return (
+        <div>
+          {children}
+        </div>
+      )
+    }
+  }
+  
+  class App6 extends React.Component {
+    render() {
+      let h1Style={
+        fontWeight: "normal"
+      }
+      
+      return(
+        <div>
+          <h1 style={h1Style}>React Example</h1>
+          <Props6>
+            <p>Node from App Component1.</p>
+          </Props6>
+          <Props6>
+            <p>Node from App Component2.</p>
+          </Props6>
+        </div>
+      )
+    }
+  }
+  
+  root.render(
+    <App6></App6>
+  )
