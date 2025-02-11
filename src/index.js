@@ -6,10 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  React.createElement(
-    "h1", null, "Hello React!!"
-  )
+ <App></App>
 );
 
 reportWebVitals();
-
