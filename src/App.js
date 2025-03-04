@@ -1,13 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
-import AddTask from './js/18_AddTask';
+import gsap from 'gsap';
+import './css/gsap2.css';
+import Logo from './js2/step3/Logo';
+import Navigation from './js2/step3/Navigation';
+import Content from './js2/step3/Content';
 
  class App extends Component {
     render() {
         return (
-            <div className="container">
-                <h1>React TodoList</h1>
-                <AddTask></AddTask>
+            <div className='container'>
+                <div className='top'>
+                    <div className="top_inner">
+                        <Logo />
+                        <Navigation />
+                    </div>
+                </div>
+                <Content />
             </div>
         )
     }

@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+::-webkit-input-placeholder { /* Edge */
+	font-style: italic;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	font-style: italic;
+}
+::placeholder {
+	font-style: italic;
+}
+input[type=text],
+input[type=password],
+input[type=email] {
+	padding: 10px 16px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #777;
+	border: 2px solid #e4e4e4;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+textarea {
+	padding: 10px 16px;
+	line-height: 28px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #777;
+	border: 2px solid #e4e4e4;
+	resize: none;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+input[type=submit],
+input[type=reset] {
+	padding: 0 24px;
+	line-height: 44px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.875em;
+	font-weight: 600;
+	background-color: #989898;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: all 0.2s;
+}
+input[type=submit] {
+	background-color: #4acaa8;
+}
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+}
+#contact {
+	margin: 0 auto;
+	padding: 32px 0;
+	max-width: 1000px;
+}
+#contact h2 {
+	padding-bottom: 24px;
+	font-size: 1.5em;
+	color: #777;
+}
+#contact p {
+	padding-bottom: 30px;
+	line-height: 28px;
+	font-size: 1em;
+	color: #777;
+}
+#contact input[type=text],
+#contact input[type=email] {
+	display: block;
+	margin-bottom: 16px;
+	width: 100%;
+}
+#contact textarea {
+	display: block;
+	margin-bottom: 28px;
+	width: 100%;
+}
+#contact input[type=submit] {
+	margin-right: 16px;
+}
+#contact input.name,
+#contact input.email {
+	float: left;
+	width: 48%;
+}
+#contact input.name {
+	margin-right: 4%;
+}
+
+@media only screen and (max-width: 760px) {
+	#contact {
+		padding: 32px 16px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	#contact input.name,
+	#contact input.email {
+		float: none;
+		width: 100%;
+	}
+	#contact input.name {
+		margin-right: 0;
+	}
+	#contact input[type=submit],
+	#contact input[type=reset] {
+		width: 100%;
+	}
+	#contact input[type=submit] {
+		margin-right: 0;
+		margin-bottom: 16px;
+	}
+}
